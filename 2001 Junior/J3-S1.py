@@ -25,3 +25,14 @@ def count_pts(suit):
     elif len(suit) == 2:
         pts += 1
     return pts
+
+print("Cards Dealt              Points")
+pc = count_pts(cs)
+pd = count_pts(ds)
+ph = count_pts(hs)
+ps = count_pts(ss)
+print("Clubs", *cs, pc)
+print("Diamonds", *ds, pd)
+print("Hearts", *hs, ph)
+print("Spades", *ss, ps)
+print(f"                       Total {pc+pd+ph+ps}")
