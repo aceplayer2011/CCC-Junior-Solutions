@@ -16,7 +16,7 @@ def good(n):
 
     return True
 
-def main():
+def function1():
     m = int(input())
     n = int(input())
     tc = 0
@@ -26,4 +26,4 @@ def main():
 
     print(tc)
     
-main()
+function1()
