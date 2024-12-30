@@ -1,2 +1,0 @@
-normal = input()
-changed = input()
