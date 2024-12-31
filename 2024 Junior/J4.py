@@ -1,20 +1,36 @@
 num = int(input())
-for3points = input()
-trash = input()
-cnt = 0
-tapes = 0
+row1 = input().replace(" ", "")
+row2 = input().replace(" ", "")
 
-for i in range(len(for3points)):
-    if for3points[cnt] == '1':
-        tapes += 3
-    cnt += 1
-'''
-while True:
-    if cnt == num:
-        break
-    else:
-        if for3points[cnt] == '1':
+tapes = 0
+borw1, borw2 = 'w', 'w'
+
+
+for i in range(num):
+    topbottom = 0 
+
+    if row1[i] == '1':
+        if borw1 == 'w':
             tapes += 3
-        cnt += 1
-'''
+        else:
+            tapes += 1
+        borw1 = 'b'
+        topbottom += 1
+    else:
+        borw1 = 'w'
+
+    if row2[i] == '1':
+        if borw2 == 'w':
+            tapes += 3
+        else:
+            tapes += 1
+        borw2 = 'b'
+        topbottom += 1
+    else:
+        borw2 = 'w'
+
+    if i%2 == 0:
+        if topbottom == 2:
+            tapes -= 2
+
 print(tapes)
